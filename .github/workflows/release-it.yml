@@ -11,5 +11,5 @@ jobs:
         with:
           release-type: node
           package-name: testing-repo
-          command: github-release
+          command: manifest-pr
 
