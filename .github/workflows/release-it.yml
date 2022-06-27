@@ -12,3 +12,4 @@ jobs:
           release-type: node
           package-name: testing-repo
           command: github-release
+
