@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v1.1.0...testing-repo-v1.1.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* remove target branch ([53d1fc2](https://github.com/rjzhao1/testing-repo/commit/53d1fc208ecd0ed2c82e292b6987ffe9233f80ab))
+
 ## [1.1.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v1.0.0...testing-repo-v1.1.0) (2022-06-27)
 
 
