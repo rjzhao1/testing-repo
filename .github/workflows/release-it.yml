@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - test-release-it-1
+      - main
 name: release-please
 jobs:
   release-please:
@@ -12,5 +12,3 @@ jobs:
           release-type: node
           package-name: dam-backend
           command: manifest
-          targetBranch: test-release-it-1
-          default-branch: test-release-it-1
