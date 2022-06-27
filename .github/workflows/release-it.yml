@@ -10,5 +10,5 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
-          package-name: dam-backend
-          command: manifest
+          package-name: testing-repo
+          command: release-pr
