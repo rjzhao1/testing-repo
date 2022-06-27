@@ -1,7 +1,6 @@
 {
   "packages": {
     ".": {
-      "targetBranch": "test-release-it-1",
       "draft": false,
       "prerelease": false,
       "bumpMinorPreMajor": false,
