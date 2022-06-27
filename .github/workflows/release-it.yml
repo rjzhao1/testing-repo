@@ -11,4 +11,4 @@ jobs:
         with:
           release-type: node
           package-name: testing-repo
-          command: release-pr
+          command: github-release
