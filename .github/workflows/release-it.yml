@@ -12,4 +12,4 @@ jobs:
           release-type: node
           package-name: testing-repo
           command: manifest
-
+          changelog-types: '[{"type":"test_custom","section":"Test","hidden":false}]'
