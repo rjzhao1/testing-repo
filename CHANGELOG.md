@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0-beta1](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v2.0.0-beta1...testing-repo-v2.1.0-beta1) (2022-06-28)
+
+
+### Features
+
+* test custome type ([e6e8fb5](https://github.com/rjzhao1/testing-repo/commit/e6e8fb5f2f43db7eefc3245b3bdb26097d9798b2))
+
 ## [2.0.0-beta1](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v1.1.1-beta1...testing-repo-v2.0.0-beta1) (2022-06-28)
 
 
