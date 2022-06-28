@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v1.1.1...testing-repo-v2.0.0) (2022-06-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* create breaking changes
+
+### Features
+
+* create breaking changes ([f51b945](https://github.com/rjzhao1/testing-repo/commit/f51b945ee667bc2ff9c1dce5595243f32b187760))
+
 ## [1.1.1](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v1.1.0...testing-repo-v1.1.1) (2022-06-27)
 
 
