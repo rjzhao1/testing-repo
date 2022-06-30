@@ -6,7 +6,8 @@
       "bumpMinorPreMajor": false,
       "bumpPatchForMinorPreMajor": false,
       "changelogPath": "CHANGELOG.md",
-      "versioning": "default"
+      "versioning": "default",
+      "pull-request-title-pattern": "chore${scope}: ${version}"
     }
   }
 }
