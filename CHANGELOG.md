@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0-beta1](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v2.1.0-beta1...testing-repo-v2.2.0-beta1) (2022-06-30)
+
+
+### Features
+
+* test title change ([4de3157](https://github.com/rjzhao1/testing-repo/commit/4de31575a2281a1abf6f5b0dd891aa637c06b56e))
+
 ## [2.1.0-beta1](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v2.0.0-beta1...testing-repo-v2.1.0-beta1) (2022-06-28)
 
 
