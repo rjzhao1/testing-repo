@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "testing-repo",
-  "version": "2.1.0-beta1",
+  "version": "2.1.0",
   "description": "",
   "scripts": {
     "start": "yarn start:docker",
