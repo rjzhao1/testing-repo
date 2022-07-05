@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-commit_message=$1
-echo commit_message
+commit_message=$(cat $1)
+echo $commit_message
 
 npx commitlint --edit $1
