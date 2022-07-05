@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
+commit_hash=$(git rev-parse HEAD)
+parent_hashes=`git rev-list --parents -n 1 $commit_hash`
+parent_count=`wc -w <<< $parent_hashes`
+echo $parent_count
 
 npx commitlint --edit $1
