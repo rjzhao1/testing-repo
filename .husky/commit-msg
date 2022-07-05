@@ -3,10 +3,10 @@
 regex="^Merge"
 var=$(cat $1)
 echo $var
-if [[ "$var" =~ $regex ]]
-then
-    echo "matched"
-else
-    echo "not matched"
-fi
+# if [[ "$var" =~ $regex ]]
+# then
+#     echo "matched"
+# else
+#     echo "not matched"
+# fi
 npx commitlint --edit $1
