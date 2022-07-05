@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.1.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v3.0.0...testing-repo-v3.1.0) (2022-07-05)
+
+
+### Features
+
+* add commitlint conditions ([83b41fe](https://github.com/rjzhao1/testing-repo/commit/83b41fe2371b567c57241a8b16fc3ed8f3cba9dc))
+* change pr title pattern ([f159484](https://github.com/rjzhao1/testing-repo/commit/f159484ed8dcec9bb3180f89dca62925514fe0dd))
+* remove custom type ([8ebe6a6](https://github.com/rjzhao1/testing-repo/commit/8ebe6a61f091db579ba1a8364da3a53853783625))
+* temp remove commitlint hook ([a88e930](https://github.com/rjzhao1/testing-repo/commit/a88e9305247afd43a62eac0220631da209d3005a))
+
+
+### Bug Fixes
+
+* revert title pattern ([7f8195c](https://github.com/rjzhao1/testing-repo/commit/7f8195c963421c60c4d06fd7aa3d83ae0d94717a))
+* test change in title ([6e8ad51](https://github.com/rjzhao1/testing-repo/commit/6e8ad513bb1c25ac001f236de89a44ea6349940b))
+
 ## [3.0.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v2.1.0...testing-repo-v3.0.0) (2022-07-05)
 
 
