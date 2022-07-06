@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v3.2.0...testing-repo-v3.3.0) (2022-07-06)
+
+
+### Features
+
+* update pr title pattern ([086024d](https://github.com/rjzhao1/testing-repo/commit/086024de327daeb61bf57308fac2c05eb11bc676))
+
 ## [3.2.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v3.1.0...testing-repo-v3.2.0) (2022-07-06)
 
 
