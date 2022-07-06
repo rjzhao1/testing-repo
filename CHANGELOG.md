@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.2.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v3.1.0...testing-repo-v3.2.0) (2022-07-06)
+
+
+### Features
+
+* add case to only run commitlint when not merging ([61183e2](https://github.com/rjzhao1/testing-repo/commit/61183e224cdeb307f7636c9fcceddd5e30ed3683))
+
+
+### Bug Fixes
+
+* change request title pattern ([6699b08](https://github.com/rjzhao1/testing-repo/commit/6699b08860ab81756c97429cf6ae56bbf38809ed))
+* test valid titles ([0971e87](https://github.com/rjzhao1/testing-repo/commit/0971e87f1bb79095470a7ce8198f2142abb122d2))
+
 ## [3.1.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v3.0.0...testing-repo-v3.1.0) (2022-07-05)
 
 
