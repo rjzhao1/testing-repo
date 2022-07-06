@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.4.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v3.3.0...testing-repo-v3.4.0) (2022-07-06)
+
+
+### Features
+
+* add release to title ([83ba866](https://github.com/rjzhao1/testing-repo/commit/83ba8661cfeaac8040f7d1b8d4caaf3ca241abfc))
+* test new scope location ([dd90ced](https://github.com/rjzhao1/testing-repo/commit/dd90ced951c67576036b63b9ee4601f63f4d6d35))
+* test new scope location ([d8ce1f6](https://github.com/rjzhao1/testing-repo/commit/d8ce1f6d0c0e91dfbb3cd0de86e7e0885b43d35a))
+
 ## [3.3.0](https://github.com/rjzhao1/testing-repo/compare/testing-repo-v3.2.0...testing-repo-v3.3.0) (2022-07-06)
 
 
