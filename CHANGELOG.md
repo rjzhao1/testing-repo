@@ -202,3 +202,4 @@
 * change command to manifest-pr ([0ee7153](https://github.com/rjzhao1/testing-repo/commit/0ee71535f4fa860b1a3158b63f089a310c600212))
 * change command to release-pr ([7bf5136](https://github.com/rjzhao1/testing-repo/commit/7bf5136f631d1dee9603befd8e51878b22586c5e))
 * test new command ([344fb76](https://github.com/rjzhao1/testing-repo/commit/344fb76ef7b772b8989e803e74020e9530a3f8c5))
+Change log
