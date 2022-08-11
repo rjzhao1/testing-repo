@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "Copying"
+mkdir -p public && cp CHANGELOG.md public/CHANGELOG.md
