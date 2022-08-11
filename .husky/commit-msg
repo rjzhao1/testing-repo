@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+regex="^Merge"
+var=$(cat $1)
+echo $var
+if [[ "$var" =~ $regex ]]
+then
+    echo "Merge commit not linting"
+else
+    npx commitlint --edit $1
+fi
