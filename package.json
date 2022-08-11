@@ -42,5 +42,8 @@
     "**/*.{js,css,json,md,tsx,ts}": [
       "prettier --write"
     ]
+  },
+  "copy": {
+    "silent": true
   }
 }
