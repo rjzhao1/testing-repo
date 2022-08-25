@@ -14,7 +14,7 @@
     "test": "jest --forceExit --config=jestconfig.json",
     "start:express": "concurrently \"npx tsc --watch\" \"nodemon .build/src/server.js --watch .build/src\"",
     "start:docker": "docker compose pull && docker-compose up --force-recreate --build && docker image prune -f",
-    "copy": "mkdir -p public && cp CHANGELOG.md public/CHANGELOG.md"
+    "copy": "npx tscp"
   },
   "dependencies": {
     "express": "^4.18.1",
@@ -37,6 +37,7 @@
     "nodemon": "^2.0.18",
     "prettier": "^2.6.2",
     "release-please": "^13.18.5",
+    "tscp": "^1.0.0",
     "typescript": "4.6.4"
   },
   "lint-staged": {
@@ -44,5 +45,7 @@
       "prettier --write"
     ]
   },
-  "copy": ["copy"]
+  "copy": [
+    "copy"
+  ]
 }

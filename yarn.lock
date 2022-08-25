@@ -4878,6 +4878,11 @@ ts-node@^10.8.1:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
+tscp@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tscp/-/tscp-1.0.0.tgz#4be9cee2272fecb2b6c52d48195b8a440ece7a53"
+  integrity sha512-w2MGmWYqgty1hCB+rJP6xXvB9i+BTo9aZhqGEvd/VUDv+NjPtOJPhc18Fi+n0R2+M5LBTIaai19reBl//sW7WA==
+
 tslib@^2.1.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
