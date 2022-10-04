@@ -35,6 +35,7 @@
     "jest": "^28.1.1",
     "lint-staged": "^13.0.0",
     "nodemon": "^2.0.18",
+    "pg": "^8.8.0",
     "prettier": "^2.6.2",
     "release-please": "^13.18.5",
     "typescript": "4.6.4"
@@ -44,5 +45,7 @@
       "prettier --write"
     ]
   },
-  "copy": ["copy"]
+  "copy": [
+    "copy"
+  ]
 }
