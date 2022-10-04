@@ -10,6 +10,8 @@ jobs:
   container-job:
     # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
+    # Docker Hub image that `container-job` executes in
+    container: node:10.18-jessie
 
     # Service containers to run with `container-job`
     services:
@@ -26,13 +28,11 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-  strategy:
-    matrix:
-      node-version: [14.x]
-  steps:
-    - uses: actions/checkout@v2
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+       ports:
+          # Maps tcp port 5432 on service container to the host
+          - 5432:5432
+          
+    steps:
+      # Downloads a copy of the code in your repository before running CI tests
+      - name: Check out repository code
+        uses: actions/checkout@v3
