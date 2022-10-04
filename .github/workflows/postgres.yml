@@ -50,3 +50,6 @@ jobs:
 
       - name: Run Unit Test
         run: yarn test
+
+      # - name: Sync Dev to Local
+      #   run: PGPASSWORD=dev pg_dump -Fc -O -x -h localhost -p 5432 --username=dev -s dam | PGPASSWORD=dev pg_restore -O -x -h localhost -p 5432 --username=dev -d test
