@@ -14,7 +14,13 @@ jobs:
         image: postgres
         # Provide the password for postgres
         env:
+          POSTGRES_DB: postgres
+          # required
           POSTGRES_PASSWORD: postgres
+          # optional (defaults to `5432`)
+          POSTGRES_PORT: 5432
+          # optional (defaults to `postgres`)
+          POSTGRES_USER: postgres
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
