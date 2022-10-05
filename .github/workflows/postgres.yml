@@ -2,8 +2,7 @@ name: PostgreSQL Service Example
 on: push
 
 jobs:
-  # Label of the runner job
-  runner-job:
+  build:
     # You must use a Linux environment when using service containers or container jobs
     runs-on: ubuntu-latest
 
@@ -26,7 +25,21 @@ jobs:
           # Maps tcp port 5432 on service container to the host
           - 5432:5432
 
+
+    strategy:
+      matrix:
+        node-version: [14.x]
     steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependancy
+        run: yarn install
+
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
         uses: actions/checkout@v3
