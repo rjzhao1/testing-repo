@@ -14,7 +14,9 @@
     "test": "jest --forceExit --config=jestconfig.json",
     "start:express": "concurrently \"npx tsc --watch\" \"nodemon .build/src/server.js --watch .build/src\"",
     "start:docker": "docker compose pull && docker-compose up --force-recreate --build && docker image prune -f",
-    "copy": "mkdir -p public && cp CHANGELOG.md public/CHANGELOG.md"
+    "copy": "mkdir -p public && cp CHANGELOG.md public/CHANGELOG.md",
+    "clone": "chmod ug+x createTestDB && bash ./createTestDB"
+
   },
   "dependencies": {
     "express": "^4.18.1",
