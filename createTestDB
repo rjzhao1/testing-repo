@@ -1,0 +1,14 @@
+#!/bin/sh
+DEV_DB_HOST=localhost
+DEV_DB_USERNAME=dev
+DEV_DB_PASS=dev
+DEV_DB_NAME=test
+
+PROD_DB_HOST=localhost
+PROD_DB_USERNAME=dev
+PROD_DB_PASS=dev
+PROD_DB_NAME=ravenvolt-dev
+
+PGPASSWORD=$PROD_DB_PASS psql -U $PROD_DB_USERNAME -h $PROD_DB_HOST -d postgres -c "DROP DATABASE \"${DEV_DB_NAME}\";"
+PGPASSWORD=$PROD_DB_PASS psql -U $PROD_DB_USERNAME -h $PROD_DB_HOST -d postgres -c "CREATE DATABASE \"test\";"
+PGPASSWORD=$PROD_DB_PASS pg_dump -Fc -O -x -h $PROD_DB_HOST -p 5432 --username=$PROD_DB_USERNAME -s $PROD_DB_NAME | PGPASSWORD=$DEV_DB_PASS pg_restore -O -x -h $DEV_DB_HOST -p 5432 --username=$DEV_DB_USERNAME -d $DEV_DB_NAME
