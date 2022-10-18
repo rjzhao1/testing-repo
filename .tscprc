@@ -1,0 +1,5 @@
+{
+  "ignored_files": ["node_modules", ".husky", ".github", "reports", ".gitignore", ".tscprc", ".build", "README.md"],
+  "compiled_files": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json", "**/*.yml", "**/*.sample", "**/*.lock", "**/*.sample"], 
+  "use_ts_exclude": true
+}
