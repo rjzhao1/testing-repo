@@ -43,6 +43,9 @@ jobs:
           envkey_APP_NAME: 'RAVENVOLT'
           file_name: .env
 
+      - name: Set up MySQL
+        run: |
+          sudo /etc/init.d/mysql start
 
       - name: Create Mysql Password FIle
         run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p | echo dev
