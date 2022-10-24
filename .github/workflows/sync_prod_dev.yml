@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       mysql:
-        image: mysql:5.7
+        image: mysql:8.0
         env:
           MYSQL_DATABASE: mysql
           MYSQL_USER: dev
@@ -48,7 +48,7 @@ jobs:
         run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p | echo dev
 
       - name: Create test database
-        run: mysql --user=dev--password=dev --host=localhost --database=mysql -e "CREATE DATABASE test;"
+        run: mysql --user=dev--password=dev --host=localhost --database=mysql -e "SHOW DATABASE;"
 
       # - name: Connect to Dev DB
       #   run: ssh -fNT -o StrictHostKeyChecking=no -i ./moves.pem ec2-user@ec2-3-84-181-81.compute-1.amazonaws.com -L 5434:db.dev.my.vetmoves.com:5432
