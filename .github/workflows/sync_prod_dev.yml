@@ -25,7 +25,8 @@ jobs:
     - name: Verify MySQL connection from host
       run: |
         sudo apt-get install -y mysql-client
-        mysql --host 127.0.0.1 --port 32574 -udev -pdev -e "SHOW DATABASES"
+        mysql --host 127.0.0.1 --port 32574 -udev -pdev -e "CREATE DATABASES test"
+        mysql --host 127.0.0.1 --port 32574 -udev -pdev -e "DROP DATABASES test"
 
       # - name: Create Mysql Password FIle
       #   run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p | echo dev
