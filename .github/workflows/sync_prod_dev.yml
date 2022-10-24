@@ -32,8 +32,11 @@ jobs:
   
     - name: Create user for dev
       run: |
-        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE USER 'dev'@'%' IDENTIFIED BY 'dev';"
-        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'%';"
+        mysql --host 127.0.0.1 --port 32574 --user=${{ env.MYSQL_ROOT_DB_USER }} --password=${{ env.MYSQL_ROOT_DB_PASS }} -e "CREATE USER 'dev'@'%' IDENTIFIED BY 'dev';"
+        mysql --host 127.0.0.1 --port 32574 --user=${{ env.MYSQL_ROOT_DB_USER }} --password=${{ env.MYSQL_ROOT_DB_PASS }} -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'%';"
+      env:
+        MYSQL_ROOT_DB_USER: 'root'
+        MYSQL_ROOT_DB_PASS: 'password'
 
     - name: Create test database
       run: |
