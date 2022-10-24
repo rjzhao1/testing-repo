@@ -23,8 +23,8 @@ jobs:
     - name: Verify MySQL connection from host
       run: |
         sudo apt-get install -y mysql-client
-        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE USER 'dev'@'localhost' IDENTIFIED BY 'dev';"
-        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'localhost';"
+        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE USER 'dev'@'127.0.0.1' IDENTIFIED BY 'dev';"
+        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'127.0.0.1';"
         mysql --host 127.0.0.1 --port 32574 -udev -pdev -e "CREATE DATABASE test"
         mysql --host 127.0.0.1 --port 32574 -udev -pdev -e "DROP DATABASE test"
 
