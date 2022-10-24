@@ -24,11 +24,11 @@ jobs:
       run: |
         sudo apt-get install -y mysql-client
 
-      - uses: SpicyPizza/create-envfile@v1.2
-        with:
-          envkey_MYSQL_DB_USER: 'dev'
-          envkey_MYSQL_DB_PASS: 'dev'
-          file_name: .env
+    - uses: SpicyPizza/create-envfile@v1.2
+      with:
+        envkey_MYSQL_DB_USER: 'dev'
+        envkey_MYSQL_DB_PASS: 'dev'
+        file_name: .env
   
     - name: Create user for dev
       run: |
