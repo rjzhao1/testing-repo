@@ -32,13 +32,12 @@ jobs:
     - name: Create Postgres Password FIle
       run: |
         touch .my.cnf
-        echo user:root >> .my.cnf
         echo password:password >> .my.cnf
         chmod 600 .my.cnf
 
     - name: Create test database
       run: |
-        mysql --userroot -e -p "SHOW DATABASES;" 
+        mysql -uroot -e -p "SHOW DATABASES;" 
       env:
         MYSQPASSFILE: .my.cnf
 
