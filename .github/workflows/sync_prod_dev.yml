@@ -38,6 +38,9 @@ jobs:
     - name: Create test database
       run: |
         mysql --host 127.0.0.1 --port 32574 --user=${{ env.envkey_MYSQL_DB_USER }} --password=${{ env.envkey_MYSQL_DB_PASS }} -e "SHOW DATABASES;"
+      env:
+        MYSQL_DB_USER: 'dev'
+        MYSQL_DB_PASS: 'dev'
 
       # - name: Connect to Dev DB
       #   run: ssh -fNT -o StrictHostKeyChecking=no -i ./moves.pem ec2-user@ec2-3-84-181-81.compute-1.amazonaws.com -L 5434:db.dev.my.vetmoves.com:5432
