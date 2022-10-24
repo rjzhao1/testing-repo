@@ -24,20 +24,14 @@ jobs:
       run: |
         sudo apt-get install -y mysql-client
 
-    # - name: Create user for dev
-    #   run: |
-    #     mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE USER 'dev'@'%' IDENTIFIED BY 'dev';"
-    #     mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'%';"
-
-    - name: Create Postgres Password FIle
+    - name: Create user for dev
       run: |
-        touch .my.cnf
-        echo password:password >> .my.cnf
-        chmod 600 .my.cnf
+        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE USER 'dev'@'%' IDENTIFIED BY 'dev';"
+        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'%';"
 
     - name: Create test database
       run: |
-        mysql -uroot -e -p "SHOW DATABASES;" 
+        mysql -udev -e -pdev "SHOW DATABASES;" 
       env:
         MYSQPASSFILE: .my.cnf
 
