@@ -8,50 +8,28 @@ jobs:
     runs-on: ubuntu-latest
     services:
       mysql:
-        image: mysql:8.0
+        image: mysql:5.7
         env:
-          MYSQL_DATABASE: mysql
-          MYSQL_USER: dev
-          MYSQL_PASSWORD: dev
-          MYSQL_ROOT_PASSWORD: dev
+          MYSQL_ROOT_PASSWORD: password
         ports:
-          - 3306:3306
+        - 32574:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     strategy:
       matrix:
         node-version: ["14.x"]
+
     steps:
-      - uses: actions/checkout@v2
+    - name: Verify MySQL connection from host
+      run: |
+        sudo apt-get install -y mysql-client
+        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "SHOW DATABASES"
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+      # - name: Create Mysql Password FIle
+      #   run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p | echo dev
 
-      - name: Configure Azure Credentials
-        run: echo 'setup Azure Credentials'
-
-      - name: Read dev secrets from Azure into environment variables
-        run: echo 'setup dev Azure secret into environment variable'
-
-      - name: Read dev secrets from Azure into environment variables
-        run: echo 'setup prod Azure secret into environment variable'
-
-      - uses: SpicyPizza/create-envfile@v1.2
-        with:
-          envkey_APP_NAME: 'RAVENVOLT'
-          file_name: .env
-
-      - name: Set up MySQL
-        run: |
-          sudo systemctl start mysql
-
-      - name: Create Mysql Password FIle
-        run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p | echo dev
-
-      - name: Create test database
-        run: mysql --user=dev--password=dev --host=localhost --database=mysql -e "SHOW DATABASE;"
+      # - name: Create test database
+      #   run: mysql --user=dev--password=dev --host=localhost --database=mysql -e "SHOW DATABASE;"
 
       # - name: Connect to Dev DB
       #   run: ssh -fNT -o StrictHostKeyChecking=no -i ./moves.pem ec2-user@ec2-3-84-181-81.compute-1.amazonaws.com -L 5434:db.dev.my.vetmoves.com:5432
