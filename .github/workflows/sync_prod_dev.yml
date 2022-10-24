@@ -10,8 +10,6 @@ jobs:
       mysql:
         image: mysql:5.7
         env:
-          MYSQL_USER: dev
-          MYSQL_PASSWORD: dev
           MYSQL_ROOT_PASSWORD: password
         ports:
         - 32574:3306
@@ -25,6 +23,7 @@ jobs:
     - name: Verify MySQL connection from host
       run: |
         sudo apt-get install -y mysql-client
+        mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE USER 'dev'@'localhost' IDENTIFIED BY 'dev';"
         mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'localhost';"
         mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE DATABASE test"
         mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "DROP DATABASE test"
