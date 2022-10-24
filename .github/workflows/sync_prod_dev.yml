@@ -29,11 +29,11 @@ jobs:
         mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "CREATE USER 'dev'@'%' IDENTIFIED BY 'dev';"
         mysql --host 127.0.0.1 --port 32574 -uroot -ppassword -e "GRANT ALL PRIVILEGES ON * . * TO 'dev'@'%';"
 
-      - name: Create Mysql Password FIle
-        run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p | echo dev
+    -name: Create Mysql Password FIle
+      run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p | echo dev
 
-      - name: Create test database
-        run: mysql --login-path=dev -e "SHOW DATABASE;"
+    -name: Create test database
+      run: mysql --login-path=dev -e "SHOW DATABASE;"
 
       # - name: Connect to Dev DB
       #   run: ssh -fNT -o StrictHostKeyChecking=no -i ./moves.pem ec2-user@ec2-3-84-181-81.compute-1.amazonaws.com -L 5434:db.dev.my.vetmoves.com:5432
