@@ -31,7 +31,7 @@ jobs:
 
     - name: Create test database
       run: |
-        mysql -udev -e -pdev "SHOW DATABASES;" 
+        mysql --host 127.0.0.1 --port 32574 -udev -e -pdev "SHOW DATABASES;" 
       env:
         MYSQPASSFILE: .my.cnf
 
