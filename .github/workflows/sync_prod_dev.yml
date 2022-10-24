@@ -37,7 +37,7 @@ jobs:
 
     - name: Create test database
       run: |
-        mysql --host 127.0.0.1 --port 32574 --user=${{ env.envkey_MYSQL_DB_USER }} --password=${{ env.envkey_MYSQL_DB_PASS }} -e "SHOW DATABASES;"
+        mysql --host 127.0.0.1 --port 32574 --user=${{ env.MYSQL_DB_USER }} --password=${{ env.MYSQL_DB_PASS }} -e "SHOW DATABASES;"
       env:
         MYSQL_DB_USER: 'dev'
         MYSQL_DB_PASS: 'dev'
