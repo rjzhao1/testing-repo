@@ -45,7 +45,7 @@ jobs:
 
 
       - name: Create Mysql Password FIle
-        run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -p
+        run: mysql_config_editor set --login-path=dev --user=dev --host=localhost -password=dev
 
       - name: Create test database
         run: mysql --login-path=dev -e "CREATE DATABASE test;"
