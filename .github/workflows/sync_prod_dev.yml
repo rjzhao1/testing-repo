@@ -40,7 +40,7 @@ jobs:
 
     - name: Create test database
       run: |
-        MYSQL_PASSWORD=${{env.MYSQL_DB_PASS}} mysql --host 127.0.0.1 --port 32574 --user=${{ env.MYSQL_DB_USER }} -e "SHOW DATABASES;"
+        MYSQL_PWD=${{secret.MYSQL_DEV_PASS}} mysql --host 127.0.0.1 --port 32574 --user=${{ env.MYSQL_DB_USER }} -e "SHOW DATABASES;"
       env:
         MYSQL_DB_USER: 'dev'
         MYSQL_DB_PASS: 'dev'
